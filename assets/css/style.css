@@ -732,6 +732,7 @@ body.active { overflow: hidden; }
 .food-menu-list {
   display: grid;
   gap: 30px;
+  padding-left: 0px;
 }
 
 .food-menu-card {
