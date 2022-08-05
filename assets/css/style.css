@@ -812,6 +812,15 @@ body.active { overflow: hidden; }
 
 .food-menu-card .del { color: var(--gray-x-11-gray); }
 
+.card-banner .w-100 {
+  width: 100%;
+  object-fit: cover;
+  transform: scale(0.9);
+  transition: var(--transition-2);
+}
+
+.card-banner:is(:hover, :focus-within) .w-100 { transform: scale(1.05); }
+
 
 
 
@@ -957,6 +966,7 @@ body.active { overflow: hidden; }
 .banner-list {
   display: grid;
   gap: 10px;
+  padding-left: 0px;
 }
 
 .banner-lg { height: 430px; }
@@ -1048,6 +1058,7 @@ body.active { overflow: hidden; }
 .blog-list {
   display: grid;
   gap: 30px;
+  padding-left: 0px;
 }
 
 .blog-card {
