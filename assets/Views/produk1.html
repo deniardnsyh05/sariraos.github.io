@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,17 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detaiel Produk</title>
+  <title>Sari Raos</title>
 
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./../images/logo.png" type="image/png+xml">
+
+  <!--
+    - Aos
+  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- 
     - custom css link
   -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
+ 
+
+
 
   <!-- 
     - google font link
@@ -36,9 +44,11 @@
 
 </head>
 
+
 <body id="top">
 
-  <div id="preloader" style="background-image: url('../images/loader.gif')"></div>
+  
+<div id="preloader" style="background-image: url('./../images/loader.gif')"></div>
 
   <!-- 
     - #HEADER
@@ -48,14 +58,14 @@
     <div class="container">
 
       <h1>
-        <a href="../../index.html" class="logo">Sari <span class="span">Rasa.</span></a>
+        <a href="#" class="logo">Sari <span class="span">Raos.</span></a>
       </h1>
 
       <nav class="navbar" data-navbar>
         <ul class="navbar-list">
 
           <li class="nav-item">
-            <a href="../../index.html" class="navbar-link" data-nav-link>Home</a>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
           </li>
 
           <li class="nav-item">
@@ -71,16 +81,13 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="navbar-link" data-nav-link>Contact Us</a>
+            <a href="#footer-form" class="navbar-link" data-nav-link>Contact Us</a>
           </li>
 
         </ul>
       </nav>
 
       <div class="header-btn-group">
-        <button class="search-btn" aria-label="Search" data-search-btn>
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
 
         <button class="btn btn-hover">Reservation</button>
 
@@ -98,30 +105,7 @@
 
 
 
-  <!-- 
-    - #SEARCH BOX
-  -->
-
-  <div class="search-container" data-search-container>
-
-    <div class="search-box">
-      <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
-        class="search-input">
-
-      <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
-        <ion-icon name="search-outline"></ion-icon>
-      </button>
-    </div>
-
-    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
-
-  </div>
-
-
-
-
-
-<!-- 
+      <!-- 
         - #ABOUT
       -->
 
@@ -129,29 +113,27 @@
 
         <div class="container">
 
-          <div class="about-banner">
+          <div class="about-banner" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500">
 
               <img src="./assets/images/food-menu-1.png" width="509" height="459" loading="lazy"
-              alt="Fried Chicken Unlimited" class="w-100 about-img">
-
-
+              alt="Fried Chicken Unlimited" class="w-100 about-img about-images">
 
           </div>
 
           <div class="about-content">
 
-            <h2 class="h2 about-title">
+            <h2 class="h2 about-title" data-aos="fade-right"  data-aos-offset="200" data-aos-duration="800">
               Caferio, Burgers, and Best Pizzas
-              <span class="span">in Town!</span>
+              <span class="span" data-aos="fade-right" data-aos-offset="150" data-aos-duration="800" data-aos-delay="250">in Town!</span>
             </h2>
 
-            <p class="about-text">
+            <p class="about-text" data-aos="fade-right" data-aos-offset="150" data-aos-duration="800" data-aos-delay="400">
               The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during
               the Jurchen
               invasion of the 1120s, while it is also known that many restaurants were run by families.
             </p>
 
-            <ul class="about-list">
+            <ul class="about-list" data-aos="fade-right"  data-aos-offset="150" data-aos-duration="800" data-aos-delay="500">
 
               <li class="about-item">
                 <ion-icon name="checkmark-outline"></ion-icon>
@@ -178,11 +160,9 @@
               </li>
 
             </ul>
-
-            <div class="order">
-          
-              <a href="https://api.whatsapp.com/send?phone=6283878972452"><button class="btn btn-hover">Order Now</button></a>
-             </div>
+            
+            <button class="btn btn-hover">Order Now</button></a>
+      
           </div>
 
         </div>
@@ -233,8 +213,84 @@
 
           <ul class="food-menu-list">
 
+           <li>
+              <div class="food-menu-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="200" data-aos-duration="700">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-2.png" width="300" height="300" loading="lazy"
+                    alt="Burger King Whopper" class="w-100">
+
+                  <div class="badge">-10%</div>
+
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Noddles</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Burger King Whopper</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="29.00">$29.00</data>
+
+                  <del class="del">$39.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
             <li>
-              <div class="food-menu-card">
+              <div class="food-menu-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="200" data-aos-duration="700" data-aos-delay="300">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-3.png" width="300" height="300" loading="lazy"
+                    alt="White Castle Pizzas" class="w-100">
+
+                  <div class="badge">-25%</div>
+
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Pizzas</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">White Castle Pizzas</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="200" data-aos-duration="700"  data-aos-delay="400">
 
                 <div class="card-banner">
                   <img src="./assets/images/food-menu-4.png" width="300" height="300" loading="lazy"
@@ -242,7 +298,6 @@
 
                   <div class="badge">-20%</div>
 
-                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -271,85 +326,6 @@
 
               </div>
             </li>
-
-            <li>
-              <div class="food-menu-card">
-
-                <div class="card-banner">
-                  <img src="./assets/images/food-menu-5.png" width="300" height="300" loading="lazy"
-                    alt="Kung Pao Chicken BBQ" class="w-100">
-
-                  <div class="badge">-5%</div>
-
-                  <button class="btn food-menu-btn">Order Now</button>
-                </div>
-
-                <div class="wrapper">
-                  <p class="category">Nuggets</p>
-
-                  <div class="rating-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-                </div>
-
-                <h3 class="h3 card-title">Kung Pao Chicken BBQ</h3>
-
-                <div class="price-wrapper">
-
-                  <p class="price-text">Price:</p>
-
-                  <data class="price" value="49.00">$49.00</data>
-
-                  <del class="del">$69.00</del>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="food-menu-card">
-
-                <div class="card-banner">
-                  <img src="./assets/images/food-menu-6.png" width="300" height="300" loading="lazy"
-                    alt="Wendy's Chicken" class="w-100">
-
-                  <div class="badge">-15%</div>
-
-                  <button class="btn food-menu-btn">Order Now</button>
-                </div>
-
-                <div class="wrapper">
-                  <p class="category">Chicken</p>
-
-                  <div class="rating-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-                </div>
-
-                <h3 class="h3 card-title">Wendy's Chicken</h3>
-
-                <div class="price-wrapper">
-
-                  <p class="price-text">Price:</p>
-
-                  <data class="price" value="49.00">$49.00</data>
-
-                  <del class="del">$69.00</del>
-
-                </div>
-
-              </div>
-            </li>
-
           </ul>
 
 
@@ -357,7 +333,7 @@
       </section>
 
 
-      <!-- 
+ <!-- 
     - #FOOTER
   -->
 
@@ -368,7 +344,7 @@
 
         <div class="footer-brand">
 
-          <a href="" class="logo">Sari <span class="span">Rasa.</span></a>
+          <a href="" class="logo">Sari <span class="span">Raos.</span></a>
 
           <p class="footer-text">
             Financial experts support or help you to to find out which way you can raise your funds more.
@@ -444,7 +420,12 @@
 
         </ul>
 
-        <form action="" class="footer-form">
+        <form action="" class="footer-form" name="Contack-form" id="footer-form">
+
+          <div class="alert alert-warning alert-dismissible fade show d-none" role="alert">
+            <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
 
           <p class="footer-list-title">Book a Table</p>
 
@@ -458,23 +439,14 @@
 
           </div>
 
-          <div class="input-wrapper">
-
-            <select name="total_person" aria-label="Total person" class="input-field">
-              <option value="person">Person</option>
-              <option value="2 person">2 Person</option>
-              <option value="3 person">3 Person</option>
-              <option value="4 person">4 Person</option>
-              <option value="5 person">5 Person</option>
-            </select>
-
-            <input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
-
-          </div>
-
           <textarea name="message" required placeholder="Message" aria-label="Message" class="input-field"></textarea>
 
-          <button type="submit" class="btn">Send</button>
+          <button type="submit" class="btn btn-send">Send</button>
+
+          <button class="btn btn-loading d-none" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
 
         </form>
 
@@ -484,7 +456,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright-text">
-          &copy; 2022 <a href="#" class="copyright-link">SariRasa</a> All Rights Reserved.
+          &copy; 2022 <a href="#" class="copyright-link">SariRaos.</a>
         </p>
       </div>
     </div>
@@ -510,6 +482,8 @@
   <!-- 
     - custom js link
   -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="./assets/js/script.js" defer></script>
 
   <!-- 
@@ -518,13 +492,9 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <script>
-    const loader = document.getElementById("preloader");
+ 
 
-    window.addEventListener("load", function(){
-      loader.style.display = "none";
-    })
-  </script>
+
 
 
 </body>

@@ -1,6 +1,22 @@
 'use strict';
 
+/**
+ * Aos
+ */
 
+AOS.init({
+  once: true
+});
+
+/**
+ * preload
+ */
+
+const loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+  loader.style.display = "none";
+});
 
 /**
  * navbar toggle
@@ -23,6 +39,11 @@ for (let i = 0; i < navbarLinks.length; i++) {
 }
 
 
+/**
+ * btn
+ */
+
+
 
 /**
  * header sticky & back to top
@@ -43,50 +64,44 @@ window.addEventListener("scroll", function () {
 
 
 
-/**
- * search box toggle
- */
-
-const searchBtn = document.querySelector("[data-search-btn]");
-const searchContainer = document.querySelector("[data-search-container]");
-const searchSubmitBtn = document.querySelector("[data-search-submit-btn]");
-const searchCloseBtn = document.querySelector("[data-search-close-btn]");
-
-const searchBoxElems = [searchBtn, searchSubmitBtn, searchCloseBtn];
-
-for (let i = 0; i < searchBoxElems.length; i++) {
-  searchBoxElems[i].addEventListener("click", function () {
-    searchContainer.classList.toggle("active");
-    document.body.classList.toggle("active");
-  });
-}
-
-
 
 /**
  * move cycle on scroll
  */
 
-const deliveryBoy = document.querySelector("[data-delivery-boy]");
 
-let deliveryBoyMove = -80;
-let lastScrollPos = 0;
+/**
+ * Submit
+ */
 
-window.addEventListener("scroll", function () {
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwN5XFErBMB97ShMtumXl32_ZrqKqCO9XUak2cEqD4wDh5I9JlrdBr-z7x-EMuQ3Ifa/exec'
+const form = document.forms['Contack-form']
+const btnSend = document.querySelector(".btn-send");
+const btnLoading = document.querySelector(".btn-loading");
+const myAlert = document.querySelector(".alert");
 
-  let deliveryBoyTopPos = deliveryBoy.getBoundingClientRect().top;
+form.addEventListener('submit', e => {
+  e.preventDefault()
 
-  if (deliveryBoyTopPos < 500 && deliveryBoyTopPos > -250) {
-    let activeScrollPos = window.scrollY;
+  // tampilkan tombol submit klik
+  // tampilkan tombol loading hilangkan tombol kirim
 
-    if (lastScrollPos < activeScrollPos) {
-      deliveryBoyMove += 1;
-    } else {
-      deliveryBoyMove -= 1;
-    }
+  btnLoading.classList.toggle('d-none');
+  btnSend.classList.toggle('d-none');
 
-    lastScrollPos = activeScrollPos;
-    deliveryBoy.style.transform = `translateX(${deliveryBoyMove}px)`;
-  }
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      // tampilkan tombol kirim
+      // hingkan tombil loading
+      btnLoading.classList.toggle('d-none');
+      btnSend.classList.toggle('d-none');
+      // tampilkan alert
+      myAlert.classList.toggle('d-none');
+      // reset form
+      form.reset();
+      console.log('Success!', response)
+    })
+    .catch(error => console.error('Error!', error.message))
+})
 
-});
+

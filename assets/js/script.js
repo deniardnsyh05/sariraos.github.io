@@ -64,25 +64,6 @@ window.addEventListener("scroll", function () {
 
 
 
-/**
- * search box toggle
- */
-
-const searchBtn = document.querySelector("[data-search-btn]");
-const searchContainer = document.querySelector("[data-search-container]");
-const searchSubmitBtn = document.querySelector("[data-search-submit-btn]");
-const searchCloseBtn = document.querySelector("[data-search-close-btn]");
-
-const searchBoxElems = [searchBtn, searchSubmitBtn, searchCloseBtn];
-
-for (let i = 0; i < searchBoxElems.length; i++) {
-  searchBoxElems[i].addEventListener("click", function () {
-    searchContainer.classList.toggle("active");
-    document.body.classList.toggle("active");
-  });
-}
-
-
 
 /**
  * move cycle on scroll
@@ -116,7 +97,7 @@ window.addEventListener("scroll", function () {
  * Submit
  */
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzy0bg1CiSOW7EWQpE-n0jhYqpmTjnndvtDR4rw8DYqTv5j9xR0CnTC0nUMCnP3bczJ/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwN5XFErBMB97ShMtumXl32_ZrqKqCO9XUak2cEqD4wDh5I9JlrdBr-z7x-EMuQ3Ifa/exec'
 const form = document.forms['Contack-form']
 const btnSend = document.querySelector(".btn-send");
 const btnLoading = document.querySelector(".btn-loading");

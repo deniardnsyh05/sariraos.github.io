@@ -371,6 +371,11 @@ body.active { overflow: hidden; }
   letter-spacing: -2px;
 }
 
+
+.logo:hover {
+  color: var(--color);
+}
+
 .logo .span {
   display: inline-block;
   color: var(--deep-saffron);
@@ -446,72 +451,6 @@ body.active { overflow: hidden; }
 }
 
 .navbar-link:is(:hover, :focus) { color: var(--dark-orange); }
-
-
-
-
-/*-----------------------------------*\
-  #SEARCH BOX
-\*-----------------------------------*/
-
-.search-container {
-  position: fixed;
-  top: -60%;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  background-color: var(--black_95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-inline: 15px;
-  z-index: 5;
-  visibility: hidden;
-  opacity: 0;
-  transition: var(--transition-2);
-}
-
-.search-container.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(50%);
-}
-
-.search-box {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-}
-
-.search-input {
-  color: var(--gainsboro);
-  font-size: 3rem;
-  padding: 20px 15px;
-  padding-inline-end: 70px;
-}
-
-.search-input::placeholder { color: var(--spanish-gray); }
-
-.search-input::-webkit-search-cancel-button { display: none; }
-
-.search-submit {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 15px;
-  color: var(--onyx);
-  font-size: 4rem;
-  transition: var(--transition-1);
-}
-
-.search-submit:is(:hover, :focus) { color: var(--gainsboro); }
-
-.search-close-btn {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  cursor: url("../images/close.png"), auto;
-}
 
 
 
@@ -631,13 +570,14 @@ body.active { overflow: hidden; }
 .about { text-align: center; }
 
 .about-banner {
-  position: relative;
   aspect-ratio: 1 / 0.9;
 }
 
 .about-img {
   max-width: max-content;
   margin-inline: auto;
+  padding-top: 30px;
+  
 }
 
 .about-title > .span {
@@ -651,9 +591,10 @@ body.active { overflow: hidden; }
   color: var(--white);
 }
 
-.about-banner .abs-img {
+.about-banner .about-img {
   top: 0;
   left: 100px;
+
 }
 
 .about .section-title {
@@ -737,6 +678,7 @@ body.active { overflow: hidden; }
 .food-menu-list {
   display: grid;
   gap: 30px;
+  padding-left: 0px;
 }
 
 .food-menu-card {
@@ -815,6 +757,15 @@ body.active { overflow: hidden; }
 .food-menu-card .price { color: var(--deep-saffron); }
 
 .food-menu-card .del { color: var(--gray-x-11-gray); }
+
+.card-banner .w-100 {
+  width: 100%;
+  object-fit: cover;
+  transform: scale(0.9);
+  transition: var(--transition-2);
+}
+
+.card-banner:is(:hover, :focus-within) .w-100 { transform: scale(1.05); }
 
 
 
@@ -1256,6 +1207,11 @@ textarea.input-field {
   resize: vertical;
   margin-block-end: 10px;
 }
+
+.footer-form {
+  padding-top: 50px;
+}
+
 
 .footer-form .btn {
   font-size: var(--fs-15);
